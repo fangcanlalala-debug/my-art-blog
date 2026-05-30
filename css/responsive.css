@@ -1,0 +1,310 @@
+/* 响应式断点 */
+/* 
+ * 移动端优先策略
+ * - 移动端基础样式 (< 768px)
+ * - 平板适配 (768px - 1199px)
+ * - 桌面优先 (1200px+)
+ */
+
+/* 移动端默认样式 (< 768px) */
+@media screen and (max-width: 767px) {
+  /* 调整 Hero 区域 */
+  .hero-title {
+    font-size: var(--text-4xl);
+    padding: 0 var(--space-md);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-xl);
+    padding: 0 var(--space-md);
+  }
+
+  /* 导航栏移动端适配 */
+  .navbar-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+    z-index: var(--z-modal);
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-item a {
+    font-size: var(--text-2xl);
+  }
+
+  /* 移动端菜单按钮 */
+  .navbar-toggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: calc(var(--z-modal) + 1);
+  }
+
+  .navbar-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    position: absolute;
+    left: 0;
+    transition: all var(--transition-normal) ease;
+  }
+
+  .navbar-toggle span:nth-child(1) {
+    top: 6px;
+  }
+
+  .navbar-toggle span:nth-child(2) {
+    top: 14px;
+  }
+
+  .navbar-toggle span:nth-child(3) {
+    top: 22px;
+  }
+
+  .navbar-toggle.active span:nth-child(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active span:nth-child(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+
+  /* 网格布局移动端 */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  /* 卡片移动端适配 */
+  .card {
+    margin-bottom: var(--space-md);
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  /* 容器移动端 */
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  /* 间距调整 */
+  .section {
+    padding: var(--space-xl) 0;
+  }
+
+  .section-title {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  /* 字体大小调整 */
+  h1 {
+    font-size: var(--text-4xl);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+  }
+
+  /* 按钮移动端 */
+  .btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-sm);
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 时间轴移动端 */
+  .timeline {
+    padding-left: var(--space-md);
+  }
+
+  .timeline-item::before {
+    left: calc(-1 * var(--space-md) - 6px);
+  }
+
+  /* 瀑布流移动端 */
+  .masonry-grid {
+    column-count: 1;
+  }
+
+  /* 隐藏粒子效果（性能考虑） */
+  #particles-canvas {
+    display: none;
+  }
+}
+
+/* 平板适配 (768px - 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* 导航栏平板适配 */
+  .navbar-menu {
+    gap: var(--space-lg);
+  }
+
+  /* 网格布局 */
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Hero 区域 */
+  .hero-title {
+    font-size: var(--text-5xl);
+  }
+
+  /* 卡片 */
+  .card-image {
+    height: 250px;
+  }
+
+  /* 容器 */
+  .container {
+    max-width: 900px;
+  }
+
+  /* 瀑布流 */
+  .masonry-grid {
+    column-count: 2;
+  }
+
+  /* 隐藏移动端菜单按钮 */
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+/* 桌面适配 (1200px+) */
+@media screen and (min-width: 1200px) {
+  /* 网格布局 */
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Hero 区域 */
+  .hero-title {
+    font-size: var(--text-hero);
+  }
+
+  /* 容器 */
+  .container {
+    max-width: 1200px;
+  }
+
+  /* 瀑布流 */
+  .masonry-grid {
+    column-count: 3;
+  }
+
+  /* 隐藏移动端菜单按钮 */
+  .navbar-toggle {
+    display: none;
+  }
+
+  /* 大屏幕间距 */
+  .section {
+    padding: var(--space-xxl) 0;
+  }
+
+  /* 卡片悬停效果 */
+  .card:hover {
+    transform: translateY(-15px) rotateX(5deg);
+  }
+}
+
+/* 横屏模式 */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: var(--space-xl) 0;
+  }
+
+  .hero-title {
+    font-size: var(--text-3xl);
+  }
+}
+
+/* 高 DPI 屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* 优化字体渲染 */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 优化图片 */
+  .card-image {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* 减少动画（无障碍） */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-animate {
+    opacity: 1;
+    transform: none;
+  }
+
+  #particles-canvas {
+    display: none;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .navbar,
+  #particles-canvas,
+  .btn {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .card {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+  }
+}

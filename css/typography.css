@@ -1,0 +1,125 @@
+/* 字体导入 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+/* 全局字体设置 */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 标题字体 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+  color: var(--text);
+}
+
+h1 {
+  font-size: var(--text-hero);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--text-5xl);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--text-3xl);
+}
+
+h4 {
+  font-size: var(--text-2xl);
+}
+
+h5 {
+  font-size: var(--text-xl);
+}
+
+h6 {
+  font-size: var(--text-lg);
+}
+
+/* 艺术字体 */
+.font-accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* 段落文本 */
+p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+  color: var(--text);
+}
+
+/* 链接 */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition-normal) ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* 强调文本 */
+strong, b {
+  font-weight: 600;
+  color: var(--text);
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* 小文本 */
+small, .text-sm {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+/* 大文本 */
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.text-2xl {
+  font-size: var(--text-2xl);
+}
+
+/* 字母间距 */
+ tracking-tight {
+  letter-spacing: -0.02em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+
+/* 行高 */
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: 1.75;
+}

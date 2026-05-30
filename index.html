@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="个人艺术博客 - 探索创意的无限可能">
+  <title>创意空间 | 个人艺术博客</title>
+  
+  <link rel="stylesheet" href="css/main.css">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+</head>
+<body class="loading">
+  
+  <canvas id="particles-canvas"></canvas>
+  
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">创意空间</a>
+      
+      <button class="navbar-toggle" aria-label="菜单" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="navbar-menu">
+        <li class="navbar-item"><a href="index.html">首页</a></li>
+        <li class="navbar-item"><a href="portfolio.html">作品集</a></li>
+        <li class="navbar-item"><a href="about.html">关于</a></li>
+        <li class="navbar-item"><a href="#contact">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">探索创意的边界</h1>
+        <p class="hero-subtitle font-accent">在数字与艺术的交汇处，发现无限可能</p>
+        
+        <div class="mt-xl">
+          <a href="portfolio.html" class="btn btn-primary">探索作品</a>
+          <a href="about.html" class="btn btn-secondary">了解更多</a>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="featured">
+      <div class="container">
+        <h2 class="section-title scroll-animate">精选作品</h2>
+        
+        <div class="grid grid-cols-3">
+          <article class="card scroll-animate" data-animation="fadeInUp">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="数字艺术作品" class="card-image" loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">星际幻想</h3>
+              <p class="card-meta">数字艺术 · 2026</p>
+              <p class="card-description">探索宇宙深处的神秘之美，数字技术与想象力的完美融合。</p>
+              <a href="article.html" class="btn btn-secondary mt-md">查看详情</a>
+            </div>
+          </article>
+          
+          <article class="card scroll-animate delay-100" data-animation="fadeInUp">
+            <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=600&h=400&fit=crop" alt="摄影作品" class="card-image" loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">光影流转</h3>
+              <p class="card-meta">摄影艺术 · 2026</p>
+              <p class="card-description">用镜头捕捉光影的瞬息万变，记录生活中被忽略的美好。</p>
+              <a href="article.html" class="btn btn-secondary mt-md">查看详情</a>
+            </div>
+          </article>
+          
+          <article class="card scroll-animate delay-200" data-animation="fadeInUp">
+            <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=600&h=400&fit=crop" alt="设计作品" class="card-image" loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">未来设计</h3>
+              <p class="card-meta">视觉设计 · 2026</p>
+              <p class="card-description">打破传统界限，探索未来设计的无限可能性。</p>
+              <a href="article.html" class="btn btn-secondary mt-md">查看详情</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="latest">
+      <div class="container">
+        <h2 class="section-title scroll-animate">最新动态</h2>
+        
+        <div class="grid grid-cols-2">
+          <article class="card scroll-animate" data-animation="fadeInLeft">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop" alt="文章配图" class="card-image" loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">创意设计的思考</h3>
+              <p class="card-meta">设计思考 · 2026-05-28</p>
+              <p class="card-description">在创作的道路上，我一直在思考如何将技术与艺术更好地融合，创造出既有美感又有深度的作品。</p>
+              <a href="article.html" class="btn btn-secondary mt-md">阅读更多</a>
+            </div>
+          </article>
+          
+          <article class="card scroll-animate delay-100" data-animation="fadeInRight">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=400&fit=crop" alt="文章配图" class="card-image" loading="lazy">
+            <div class="card-content">
+              <h3 class="card-title">艺术与科技的对话</h3>
+              <p class="card-meta">艺术探索 · 2026-05-25</p>
+              <p class="card-description">当数字技术遇上传统艺术，会碰撞出怎样的火花？让我们一起探索这个充满可能性的领域。</p>
+              <a href="article.html" class="btn btn-secondary mt-md">阅读更多</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="about-preview">
+      <div class="container">
+        <div class="grid grid-cols-2" style="align-items: center; gap: var(--space-xxl);">
+          <div class="scroll-animate" data-animation="fadeInLeft">
+            <h2 class="section-title" style="text-align: left;">关于我</h2>
+            <p class="text-lg">
+              我是一名热爱创意的艺术家和设计师，专注于探索数字艺术与创意设计的无限可能。
+            </p>
+            <p class="text-lg mt-md">
+              在这个空间里，我分享我的创作历程、思考和灵感。希望能与你一起探索艺术的边界。
+            </p>
+            <a href="about.html" class="btn btn-primary mt-xl">了解更多</a>
+          </div>
+          
+          <div class="scroll-animate delay-200" data-animation="fadeInRight">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&h=600&fit=crop" alt="创意过程" class="w-full" style="border-radius: var(--radius-lg);" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title scroll-animate">联系我</h2>
+        
+        <div class="text-center scroll-animate delay-100">
+          <p class="text-lg mb-xl">
+            如果你对我的作品感兴趣，或者想要合作创作，欢迎联系我。
+          </p>
+          
+          <div class="flex justify-center gap-lg">
+            <a href="mailto:hello@example.com" class="btn btn-primary">发送邮件</a>
+            <a href="portfolio.html" class="btn btn-secondary">查看更多作品</a>
+          </div>
+          
+          <div class="mt-xxl">
+            <p class="text-sm" style="color: var(--text-muted);">
+              或者通过以下方式找到我
+            </p>
+            <div class="flex justify-center gap-lg mt-md">
+              <a href="#" class="social-link" aria-label="GitHub">GitHub</a>
+              <a href="#" class="social-link" aria-label="Dribbble">Dribbble</a>
+              <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="portfolio.html">作品集</a></li>
+            <li><a href="about.html">关于</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>联系方式</h4>
+          <p>hello@example.com</p>
+          <p>中国 · 北京</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>关注我</h4>
+          <div class="social-links">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="Dribbble">Dribbble</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 创意空间. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
